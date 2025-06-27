@@ -119,7 +119,7 @@ int main(int argc, char* args[]) {
         if (current_game_state == GAME_STATE_PLAYING && current_player_turn == ai_player_color) {
             AIMove ai_chosen_move;
  int ai_time_limit_ms = 2000;
-            if (ai_select_move(game_board, ai_player_color, &ai_chosen_move)) {
+             if (ai_select_move(game_board, ai_player_color, &ai_chosen_move, ai_time_limit_ms)) {
                 printf("AI %s moves: [%d,%d] to [%d,%d]",
                        ai_player_color == WHITE ? "White" : "Black",
                        ai_chosen_move.from_r, ai_chosen_move.from_c,
